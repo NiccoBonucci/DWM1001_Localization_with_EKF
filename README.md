@@ -7,4 +7,5 @@ The robot model used for this project is a unicycle, the simulation in the real 
 
 # Setup of the work environment
 The following steps describe how to properly setup your work environment to be able to use the localization system:
-1) 
+1) Clone the GitHub link in the src of your catkin workspace
+
