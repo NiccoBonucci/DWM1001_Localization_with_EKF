@@ -6,7 +6,7 @@ This repository contains all the files needed for:
 The whole system has been tried and works on Ubuntu 20.04 with the Noetic Ninjemys version of ROS. The robot model used for this project is a unicycle, the simulation in the real environment is done with Turtlebot 2. 
 
 # Setup of the work environment
-To properly setup your work environment to be able to use the localization system, you will need the following packages:
-1) ros-dwm1001-uwb-localization-master
-2) vrpn_client_ros
+To properly setup your work environment to be able to use the localization system, you need to setup a catkin worksapce, then you need to clone this repository into the "src" folder.
+Here's a brief explanation of the packages:
+1) ekf_unicycle
 
