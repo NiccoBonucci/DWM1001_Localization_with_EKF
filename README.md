@@ -17,11 +17,15 @@ Here's a brief explanation of the packages:
 
 3) *vrpn_client_ros* : package that contains the files to initialize the Optitrack localization system on ROS. For this matter, the optitrack is used as the ground truth information for the calculation of the error between the UWB estimated trajectory, the trajectory after the EKF filtering action and the real trajectory (knowing that the Optitrack has a very high accuracy).
 
-# How to estimate the pose of a robot
+# How to estimate the pose of a robot 
 Here's the steps you have to follow to obtain a pose estimation from the UWB localization system:
-1) Setup the anchors in the space you have, making sure to save the position with respect to the origin of
-2) 
-
+1) Setup the anchors in the space you have and the tags on the robot making sure to save the positions and define the devices' type on the UWB app, then confirm the setup.
+2) Setup the Optitrack's sensors on the robot so that the point used for the position estimation coincides with the UWB robot position estimation obtained by combining the two tags' datas.
+3) Connect the tags to the USB ports of the computer and specify the ports' names in the params.yaml file of the UWB package
+4) Enable the use of the serial ports (if the permission is denied)
+5) Make sure you have an established connection to the Turtelbot 2 and the /odom topic is being published. If you are running the turtlebot and the EKF pose estimation code on two different computers, connect to the ROS Master of the Turtlebot to be able to subscribe correctly to the /odom topic
+6) Run the following scripts:
+   - 
 
 
 
