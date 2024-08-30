@@ -1,9 +1,9 @@
 # Introduction to the project
 This repository contains all the files needed for:
-- Pose estimation of a robot using DWM1001 Ultra-WideBand Localization devices
+- Pose estimation of a robot using DWM1001 Ultra-WideBand Localization devices in combination with the UWB Android application
 - Application of an Extended Kalman Filter to improve the pose estimation accuracy
 - Comparison with ground truth values taken from the Optitrack localization system
-The whole system has been tried and works on Ubuntu 20.04 with the Noetic Ninjemys version of ROS. The robot model used for this project is a unicycle, the simulation in the real environment is done with Turtlebot 2. 
+The whole system has been tried and works on Ubuntu 20.04 with the Noetic Ninjemys version of ROS. The robot model used for this project is a unicycle, the simulation in the real environment is done with Turtlebot 2. To obtain the best result possible, make sure to follow the steps and the explanation. If you have a Optitrack system, it is a good pratice to set the UWB initiator anchor exactly on the Optitrack system origin, so that it's easier to compare the datas obtained from the different systems.
 
 # Setup of the work environment
 To properly setup your work environment to be able to use the localization system, you need to setup a catkin worksapce, then you need to clone this repository into the "src" folder.
@@ -16,5 +16,12 @@ Here's a brief explanation of the packages:
 - dwm1001_active_2tag: this is the code to estimate the pose of a robot. 2 tags are needed. The robot's 2D or 3D position is obtained by combining the two tags' positions. The orientation is obtained by using the atan2 with respect to the estimated x and y positions of the tags.
 
 3) *vrpn_client_ros* : package that contains the files to initialize the Optitrack localization system on ROS. For this matter, the optitrack is used as the ground truth information for the calculation of the error between the UWB estimated trajectory, the trajectory after the EKF filtering action and the real trajectory (knowing that the Optitrack has a very high accuracy).
+
+# How to estimate the pose of a robot
+Here's the steps you have to follow to obtain a pose estimation from the UWB localization system:
+1) Setup the anchors in the space you have, making sure to save the position with respect to the origin of
+2) 
+
+
 
 
