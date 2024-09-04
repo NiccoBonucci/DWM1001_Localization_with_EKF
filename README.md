@@ -24,7 +24,7 @@ Here's the steps you have to follow to obtain a pose estimation from the UWB loc
 3) Connect the tags to the USB ports of the computer and specify the ports' names in the params.yaml file of the UWB package
 4) Enable the use of the serial ports (if the permission is denied)
 5) Make sure you have an established connection to the Turtelbot 2 and the /odom topic is being published. If you are running the turtlebot and the EKF pose estimation code on two different computers, connect to the ROS Master of the Turtlebot to be able to subscribe correctly to the /odom topic
-6) From the terminal, run the following commands:
+6) From three different terminals, run the following commands:
 - roslaunch 
 - roslaunch
 - roslaunch
