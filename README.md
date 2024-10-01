@@ -25,9 +25,9 @@ Here's the steps you have to follow to obtain a pose estimation from the UWB loc
 4) Enable the use of the serial ports (if the permission is denied)
 5) Make sure you have an established connection to the Turtelbot 2 and the /odom topic is being published. If you are running the turtlebot and the EKF pose estimation code on two different computers, connect to the ROS Master of the Turtlebot to be able to subscribe correctly to the /odom topic
 6) From three different terminals, run the following commands:
-- roslaunch 
-- roslaunch
-- roslaunch
+- roslaunch vrpn_client_ros sample.launch server:=<IP address of the computer one's working on in the network> (ex: roslaunch vrpn_client_ros sample.launch server:="192.168.0.217") 
+- roslaunch dwm1001_uwb_tag_drivers active_2tag.launch 
+- rosrun kf_simulation ekf_unicycle.py
 
 
 
