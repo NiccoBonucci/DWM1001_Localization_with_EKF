@@ -28,6 +28,8 @@ Here's the steps you have to follow to obtain a pose estimation from the UWB loc
 - roslaunch vrpn_client_ros sample.launch server:=<IP address of the computer one's working on in the network> (ex: roslaunch vrpn_client_ros sample.launch server:="192.168.0.217") 
 - roslaunch dwm1001_uwb_tag_drivers active_2tag.launch 
 - rosrun kf_simulation ekf_unicycle.py
-
+  
+N.B.: It could be possible that the computer denies the access to the USB ports. In that case identify the specific alphanumeric code (usually is ttyACM+number) of the port and use:
+sudo chmod a+rw /dev/ttyACM*
 
 
